@@ -1,0 +1,28 @@
+name: exts.dev
+stage: published
+priority: maintenance
+category: extension
+description: "Landing page and portfolio for browser extensions"
+
+links:
+  repo: ""
+  store: ""
+  landing: "https://exts.dev"
+
+metrics:
+  users: 0
+  mrr: 0
+  downloads: 0
+
+dates:
+  created: "2025-12-01"
+  published: "2025-12-11"
+  last_updated: "2025-12-11"
+
+stack:
+  - astro
+  - tailwind
+
+tags:
+  - landing
+  - marketing
