@@ -16,6 +16,16 @@
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>https://exts.dev/tabzen/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://exts.dev/tabzen/privacy.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
     <loc>https://exts.dev/privacy.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>

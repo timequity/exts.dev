@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — TabZen | exts.dev</title>
+  <meta name="description" content="Privacy policy for TabZen browser extension. Your tabs stay on your device.">
+
+  <!-- Fonts: Satoshi + Geist -->
+  <link rel="preconnect" href="https://api.fontshare.com">
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,500,400&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link href="https://cdn.jsdelivr.net/npm/geist@1.2.0/dist/fonts/geist-sans/style.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/geist@1.2.0/dist/fonts/geist-mono/style.min.css" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧘</text></svg>">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="/" class="header__logo">exts.dev</a>
+      <nav class="header__nav">
+        <a href="/tabzen/" class="header__link">TabZen</a>
+        <a href="https://github.com/timequity/tabzen" class="header__link" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container legal">
+    <h1>TabZen Privacy Policy</h1>
+    <p><em>Last updated: December 2024</em></p>
+
+    <h2>Overview</h2>
+    <p>TabZen is a browser extension that helps you manage tabs with auto-save, sessions, and search. This policy explains what data the extension accesses and how it's used.</p>
+
+    <h2>Data Collection</h2>
+    <p><strong>We collect nothing.</strong> TabZen does not collect, store, or transmit any personal data, browsing history, or usage statistics to external servers.</p>
+
+    <h2>Permissions Explained</h2>
+    <p>TabZen requires the following browser permissions:</p>
+    <ul>
+      <li><strong><code>storage</code></strong> — To save your sessions and settings locally on your device. This data never leaves your browser.</li>
+      <li><strong><code>tabs</code></strong> — To read your open tabs for saving sessions and enabling tab search. Tab data is stored only on your device.</li>
+      <li><strong><code>alarms</code></strong> — To schedule auto-save every 5 minutes. Runs entirely locally.</li>
+    </ul>
+
+    <h2>Local Storage Only</h2>
+    <p>All your data is stored using <code>chrome.storage.local</code>, which means:</p>
+    <ul>
+      <li>Data is stored locally in your browser</li>
+      <li>Data does not sync across devices (by design — for privacy)</li>
+      <li>We have no access to this data — it's yours alone</li>
+    </ul>
+
+    <h2>Network Activity</h2>
+    <p>TabZen makes <strong>zero network requests</strong>. The extension works entirely offline. We don't have servers, analytics, or any backend infrastructure.</p>
+
+    <h2>What We Don't Do</h2>
+    <ul>
+      <li>Track your browsing history</li>
+      <li>Collect analytics or usage data</li>
+      <li>Send your tabs to external servers</li>
+      <li>Show ads</li>
+      <li>Sell data (we have none to sell)</li>
+      <li>Require account creation</li>
+    </ul>
+
+    <h2>Open Source</h2>
+    <p>TabZen is fully open source. You can audit the code yourself on <a href="https://github.com/timequity/tabzen">GitHub</a> to verify these claims.</p>
+
+    <h2>Changes</h2>
+    <p>If we ever change this policy, we'll update this page. Given our commitment to privacy, significant changes are unlikely.</p>
+
+    <h2>Contact</h2>
+    <p>Questions? Open an issue on <a href="https://github.com/timequity/tabzen/issues">GitHub</a>.</p>
+
+    <p style="margin-top: 3rem;"><a href="/tabzen/">&larr; Back to TabZen</a></p>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">&copy; 2024 0x7669</p>
+      <nav class="footer__links">
+        <a href="/privacy.html" class="footer__link">All Extensions Privacy</a>
+        <a href="/terms.html" class="footer__link">Terms</a>
+        <a href="https://github.com/0x7669" class="footer__link" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
