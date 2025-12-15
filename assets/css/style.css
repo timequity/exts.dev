@@ -411,6 +411,12 @@ a:hover {
   margin-bottom: var(--space-lg);
 }
 
+.ext-hero__buttons {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
 .ext-hero__meta {
   display: flex;
   align-items: center;
