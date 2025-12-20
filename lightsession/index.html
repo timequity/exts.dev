@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LightSession — Keep ChatGPT Fast | exts.dev</title>
+  <meta name="description" content="LightSession fixes ChatGPT UI lag by trimming old messages from the DOM. Privacy-first, local-only browser extension.">
+
+  <!-- Fonts: Satoshi + Geist -->
+  <link rel="preconnect" href="https://api.fontshare.com">
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,500,400&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link href="https://cdn.jsdelivr.net/npm/geist@1.2.0/dist/fonts/geist-sans/style.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/geist@1.2.0/dist/fonts/geist-mono/style.min.css" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="LightSession — Keep ChatGPT Fast">
+  <meta property="og:description" content="Fix ChatGPT UI lag. Local-only, privacy-first extension.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://exts.dev/lightsession/">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="/" class="header__logo">exts.dev</a>
+      <nav class="header__nav">
+        <a href="https://github.com/11me/light-session" class="header__link" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="ext-hero container">
+      <div class="ext-hero__inner">
+        <img src="../assets/images/extensions/lightsession/icon.png" alt="LightSession icon" class="ext-hero__icon" width="80" height="80">
+        <div class="ext-hero__content">
+          <h1 class="ext-hero__title">LightSession</h1>
+          <p class="ext-hero__tagline">Keep ChatGPT fast in long conversations</p>
+          <div class="ext-hero__buttons">
+            <a href="#" class="btn btn--primary" target="_blank" rel="noopener">
+              Chrome
+            </a>
+            <a href="https://addons.mozilla.org/en-US/firefox/addon/lightsession-for-chatgpt/" class="btn btn--secondary" target="_blank" rel="noopener">
+              Firefox
+            </a>
+          </div>
+          <div class="ext-hero__meta">
+            <span>Free</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <h2 class="section__title">The Problem</h2>
+      <div class="section__content">
+        <p>Long ChatGPT threads are brutal for the browser: the UI keeps every message in the DOM and the tab slowly turns into molasses.</p>
+        <p>Scroll becomes choppy, typing lags, devtools crawl. After 100+ messages, even a powerful machine starts to struggle.</p>
+      </div>
+    </section>
+
+    <section class="section container">
+      <h2 class="section__title">The Solution</h2>
+      <div class="section__content">
+        <p>LightSession fixes UI lag by trimming old DOM nodes <em>on the client side</em> while keeping the actual conversation intact on OpenAI's side.</p>
+        <p>Your full conversation is always preserved — just refresh to see it all again.</p>
+      </div>
+    </section>
+
+    <section class="section container">
+      <h2 class="section__title">Features</h2>
+      <div class="features">
+        <div class="feature">
+          <span class="feature__check">✓</span>
+          <span class="feature__text">Automatic trimming — keeps only the last N messages visible (1-100 configurable)</span>
+        </div>
+        <div class="feature">
+          <span class="feature__check">✓</span>
+          <span class="feature__text">DOM batching — node removals stay within 16ms budget for smooth 60fps scrolling</span>
+        </div>
+        <div class="feature">
+          <span class="feature__check">✓</span>
+          <span class="feature__text">Smart timing — waits for AI responses to finish streaming before trimming</span>
+        </div>
+        <div class="feature">
+          <span class="feature__check">✓</span>
+          <span class="feature__text">Status indicator — optional on-page pill showing trim statistics</span>
+        </div>
+        <div class="feature">
+          <span class="feature__check">✓</span>
+          <span class="feature__text">Zero tracking — 100% local, no servers, no analytics, no telemetry</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <h2 class="section__title">Who is this for?</h2>
+      <div class="section__content">
+        <ul>
+          <li>People who keep <strong>very long ChatGPT threads</strong> (100+ messages)</li>
+          <li>Developers who use ChatGPT for <strong>debugging, code reviews, or long refactors</strong></li>
+          <li>Anyone whose ChatGPT tab becomes <strong>sluggish after a while</strong></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section container">
+      <h2 class="section__title">FAQ</h2>
+      <div class="section__content">
+        <p><strong>Does this reduce the model's context?</strong></p>
+        <p>No. LightSession only trims the DOM (what the browser renders), not the data stored by OpenAI. The conversation on OpenAI's servers remains intact.</p>
+        <p style="margin-top: 1.5rem;"><strong>Is my data safe?</strong></p>
+        <p>Yes. No external network requests, no analytics, no telemetry. Settings are stored locally in <code>browser.storage.local</code>.</p>
+      </div>
+    </section>
+
+    <section class="section container">
+      <h2 class="section__title">Feedback</h2>
+      <div class="section__content">
+        <p><strong>Found a bug or have feedback?</strong></p>
+        <p>Create an issue on <a href="https://github.com/11me/light-session/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+      </div>
+    </section>
+
+    <section class="section container">
+      <h2 class="section__title">Open Source</h2>
+      <div class="section__content">
+        <p>LightSession is fully open source. Inspect the code, suggest improvements, or fork it for your own use.</p>
+        <a href="https://github.com/11me/light-session" class="btn btn--secondary" target="_blank" rel="noopener">
+          View on GitHub →
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">&copy; 2025 0x7669</p>
+      <nav class="footer__links">
+        <a href="/lightsession/privacy.html" class="footer__link">Privacy</a>
+        <a href="/terms.html" class="footer__link">Terms</a>
+        <a href="https://github.com/11me/light-session" class="footer__link" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
