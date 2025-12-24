@@ -26,6 +26,21 @@
   <meta property="og:url" content="https://exts.dev">
 </head>
 <body>
+  <!-- NEW YEAR 2025 -->
+  <div class="ny-decorations" id="nyDecorations">
+    <span class="snowflake">❄</span>
+    <span class="snowflake">❅</span>
+    <span class="snowflake">❆</span>
+    <span class="snowflake">❄</span>
+    <span class="snowflake">❅</span>
+    <span class="snowflake">❆</span>
+    <span class="snowflake">❄</span>
+    <span class="snowflake">❅</span>
+    <span class="snowflake">❆</span>
+    <span class="snowflake">❄</span>
+    <div class="garland"></div>
+  </div>
+  <!-- END NEW YEAR 2025 -->
   <header class="header">
     <div class="container header__inner">
       <a href="/" class="header__logo">exts.dev</a>
@@ -103,5 +118,15 @@
   </footer>
 
   <script src="assets/js/main.js"></script>
+  <!-- NEW YEAR 2025 auto-hide -->
+  <script>
+    (function() {
+      var h = new Date('2025-01-08T00:00:00');
+      if (new Date() >= h) {
+        var d = document.getElementById('nyDecorations');
+        if (d) d.remove();
+      }
+    })();
+  </script>
 </body>
 </html>
