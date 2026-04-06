@@ -1,0 +1,22 @@
+{
+  "name": "exts.dev",
+  "version": "1.0.0",
+  "description": "Landing page and portfolio for browser extensions",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve .",
+    "deploy": "wrangler pages deploy . --project-name exts-dev",
+    "deploy:prod": "wrangler pages deploy . --project-name exts-dev --branch main"
+  },
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  },
+  "keywords": [
+    "landing",
+    "extensions",
+    "browser-extensions",
+    "cloudflare-pages"
+  ],
+  "author": "timequity",
+  "license": "MIT"
+}
