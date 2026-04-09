@@ -1,0 +1,11 @@
+# Local workspace artifacts
+.gemini/
+.wrangler/
+.playwright-mcp/
+node_modules/
+
+# Local reference material
+stitch_exts.dev_landing_page/
+
+# OS files
+.DS_Store
