@@ -5,46 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>exts.dev — Browser Extensions by timequity</title>
   <meta name="description" content="Focused browser extensions that respect your time. No bloat. Open source. Privacy-first.">
+  <meta name="theme-color" content="#070b10">
 
-  <!-- Fonts: Satoshi + Geist -->
   <link rel="preconnect" href="https://api.fontshare.com">
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,500,400&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
   <link href="https://cdn.jsdelivr.net/npm/geist@1.2.0/dist/fonts/geist-sans/style.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/geist@1.2.0/dist/fonts/geist-mono/style.min.css" rel="stylesheet">
 
-  <!-- Styles -->
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg?v=3">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg?v=2"><link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%23BEFF00'/><stop offset='100%' style='stop-color:%2300E0FF'/></linearGradient></defs><path d='M20 20 H80 L75 35 H35 V42 H70 L65 57 H35 V65 H80 L75 80 H20 Z' fill='url(%23g)'/></svg>">
-
-  <!-- Open Graph -->
   <meta property="og:title" content="exts.dev — Browser Extensions by timequity">
   <meta property="og:description" content="Focused browser extensions that respect your time.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://exts.dev">
 </head>
-<body>
-  <!-- NEW YEAR 2025 -->
-  <div class="ny-decorations" id="nyDecorations">
-    <span class="snowflake">❄</span>
-    <span class="snowflake">❅</span>
-    <span class="snowflake">❆</span>
-    <span class="snowflake">❄</span>
-    <span class="snowflake">❅</span>
-    <span class="snowflake">❆</span>
-    <span class="snowflake">❄</span>
-    <span class="snowflake">❅</span>
-    <span class="snowflake">❆</span>
-    <span class="snowflake">❄</span>
-    <div class="garland"></div>
-  </div>
-  <!-- END NEW YEAR 2025 -->
+<body class="page page--landing">
   <header class="header">
     <div class="container header__inner">
       <a href="/" class="header__logo">exts.dev</a>
-      <nav class="header__nav">
+      <nav class="header__nav" aria-label="Main navigation">
         <a href="https://github.com/timequity" class="header__link" target="_blank" rel="noopener">GitHub</a>
       </nav>
     </div>
@@ -52,11 +33,15 @@
 
   <main>
     <section class="hero container">
-      <h1 class="hero__title">Browser extensions that<br>respect your time</h1>
+      <h1 class="hero__title">Browser extensions that respect your time</h1>
+      <div class="hero__badge" aria-label="Privacy-first product promise">
+        <span class="hero__badge-dot" aria-hidden="true"></span>
+        <span>Privacy First</span>
+      </div>
       <p class="hero__subtitle">Focused tools. No bloat. Open source. Privacy-first.</p>
     </section>
 
-    <section class="container">
+    <section class="container catalog">
       <div class="filters" role="group" aria-label="Filter extensions by category">
         <button class="filter-btn active" data-filter="all">All</button>
         <button class="filter-btn" data-filter="focus">Focus</button>
@@ -65,42 +50,54 @@
       </div>
 
       <div class="grid" id="extensions-grid">
-        <!-- GrayMode -->
-        <a href="/graymode/" class="card" data-category="focus">
-          <img src="assets/images/extensions/graymode/icon.png" alt="GrayMode" class="card__icon">
-          <h3 class="card__title">GrayMode</h3>
-          <span class="card__category">Focus</span>
-          <p class="card__description">Focus better by turning distracting sites grayscale. Remove the dopamine trigger.</p>
+        <a href="/graymode/" class="card" data-category="focus" style="--card-accent: 190, 255, 0;">
+          <img src="assets/images/extensions/graymode/icon.png" alt="GrayMode icon" class="card__icon" width="58" height="58">
+          <div>
+            <h2 class="card__title">GrayMode</h2>
+            <span class="card__category">Focus</span>
+            <p class="card__description">Focus better by turning distracting sites grayscale. Remove the dopamine trigger.</p>
+          </div>
+          <span class="card__cta">View details</span>
         </a>
 
-        <!-- TabZen -->
-        <a href="/tabzen/" class="card" data-category="focus">
-          <img src="assets/images/extensions/tabzen/icon.png" alt="TabZen" class="card__icon">
-          <h3 class="card__title">TabZen</h3>
-          <span class="card__category">Focus</span>
-          <p class="card__description">Tab manager that never loses your tabs. Auto-save, sessions, search.</p>
+        <a href="/tabzen/" class="card" data-category="focus" style="--card-accent: 110, 170, 255;">
+          <img src="assets/images/extensions/tabzen/icon.png" alt="TabZen icon" class="card__icon" width="58" height="58">
+          <div>
+            <h2 class="card__title">TabZen</h2>
+            <span class="card__category">Focus</span>
+            <p class="card__description">Tab manager that never loses your tabs. Auto-save, sessions, search.</p>
+          </div>
+          <span class="card__cta">View details</span>
         </a>
 
-        <!-- LightSession -->
-        <a href="/lightsession/" class="card" data-category="productivity">
-          <img src="assets/images/extensions/lightsession/icon.png" alt="LightSession" class="card__icon">
-          <h3 class="card__title">LightSession</h3>
-          <span class="card__category">Productivity</span>
-          <p class="card__description">Keep ChatGPT fast in long conversations. Trims DOM, preserves context.</p>
+        <a href="/lightsession/" class="card" data-category="productivity" style="--card-accent: 88, 255, 187;">
+          <img src="assets/images/extensions/lightsession/icon.png" alt="LightSession icon" class="card__icon" width="58" height="58">
+          <div>
+            <h2 class="card__title">LightSession</h2>
+            <span class="card__category">Productivity</span>
+            <p class="card__description">Keep ChatGPT fast in long conversations. Trim DOM, preserve context.</p>
+          </div>
+          <span class="card__cta">View details</span>
         </a>
 
-        <div class="card card--coming-soon" data-category="focus">
-          <div class="card__icon">🧹</div>
-          <h3 class="card__title">CleanFeed</h3>
-          <span class="card__category">Focus</span>
-          <p class="card__description">Hide distracting elements on social media. Coming soon.</p>
+        <div class="card card--coming-soon" data-category="focus" style="--card-accent: 255, 199, 106;">
+          <div class="card__emoji" aria-hidden="true">🧹</div>
+          <div>
+            <h2 class="card__title">CleanFeed</h2>
+            <span class="card__category">Focus</span>
+            <p class="card__description">Hide distracting elements on social media. Coming soon.</p>
+          </div>
+          <span class="card__cta">Coming soon</span>
         </div>
 
-        <div class="card card--coming-soon" data-category="devtools">
-          <div class="card__icon">🛠</div>
-          <h3 class="card__title">DevPanel</h3>
-          <span class="card__category">DevTools</span>
-          <p class="card__description">Quick developer tools at your fingertips. Coming soon.</p>
+        <div class="card card--coming-soon" data-category="devtools" style="--card-accent: 159, 183, 255;">
+          <div class="card__emoji" aria-hidden="true">🛠</div>
+          <div>
+            <h2 class="card__title">DevPanel</h2>
+            <span class="card__category">DevTools</span>
+            <p class="card__description">Quick developer tools at your fingertips. Coming soon.</p>
+          </div>
+          <span class="card__cta">Coming soon</span>
         </div>
       </div>
     </section>
@@ -109,7 +106,7 @@
   <footer class="footer">
     <div class="container footer__inner">
       <p class="footer__copy">&copy; 2024 timequity</p>
-      <nav class="footer__links">
+      <nav class="footer__links" aria-label="Footer navigation">
         <a href="/privacy.html" class="footer__link">Privacy</a>
         <a href="/terms.html" class="footer__link">Terms</a>
         <a href="https://github.com/timequity" class="footer__link" target="_blank" rel="noopener">GitHub</a>
@@ -118,15 +115,5 @@
   </footer>
 
   <script src="assets/js/main.js"></script>
-  <!-- NEW YEAR 2025 auto-hide -->
-  <script>
-    (function() {
-      var h = new Date('2026-01-08T00:00:00');
-      if (new Date() >= h) {
-        var d = document.getElementById('nyDecorations');
-        if (d) d.remove();
-      }
-    })();
-  </script>
 </body>
 </html>

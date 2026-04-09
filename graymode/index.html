@@ -5,152 +5,162 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GrayMode — Focus Better by Removing Colors | exts.dev</title>
   <meta name="description" content="GrayMode turns distracting websites grayscale, removing the dopamine trigger. Focus better, browse less.">
+  <meta name="theme-color" content="#070b10">
 
-  <!-- Fonts: Satoshi + Geist -->
   <link rel="preconnect" href="https://api.fontshare.com">
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,500,400&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
   <link href="https://cdn.jsdelivr.net/npm/geist@1.2.0/dist/fonts/geist-sans/style.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/geist@1.2.0/dist/fonts/geist-mono/style.min.css" rel="stylesheet">
 
-  <!-- Styles -->
   <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg?v=3">
 
-  <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔘</text></svg>">
-
-  <!-- Open Graph -->
   <meta property="og:title" content="GrayMode — Focus Better by Removing Colors">
   <meta property="og:description" content="Turn distracting websites grayscale. Remove the dopamine trigger.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://exts.dev/graymode/">
 </head>
-<body>
+<body class="page page--detail page--graymode">
   <header class="header">
     <div class="container header__inner">
       <a href="/" class="header__logo">exts.dev</a>
-      <nav class="header__nav">
+      <nav class="header__nav" aria-label="GrayMode links">
         <a href="https://github.com/timequity/graymode" class="header__link" target="_blank" rel="noopener">GitHub</a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section class="ext-hero container">
-      <div class="ext-hero__inner">
-        <img src="../assets/images/extensions/graymode/icon.png" alt="GrayMode icon" class="ext-hero__icon" width="80" height="80">
-        <div class="ext-hero__content">
-          <h1 class="ext-hero__title">GrayMode</h1>
-          <p class="ext-hero__tagline">Focus better by turning distracting sites grayscale</p>
-          <div class="ext-hero__buttons">
-            <a href="https://chrome.google.com/webstore/detail/graymode" class="btn btn--primary" target="_blank" rel="noopener">
-              Chrome
-            </a>
-            <a href="https://addons.mozilla.org/en-US/firefox/addon/graymode/" class="btn btn--secondary" target="_blank" rel="noopener">
-              Firefox
-            </a>
-          </div>
-          <div class="ext-hero__meta">
-            <span>Free</span>
+  <main class="container product-page">
+    <section class="product-hero">
+      <div class="product-hero__panel">
+        <div class="product-hero__header">
+          <img src="../assets/images/extensions/graymode/icon.png" alt="GrayMode icon" class="product-hero__icon" width="96" height="96">
+          <span class="product-hero__eyebrow">Focus</span>
+          <h1 class="product-hero__title">GrayMode</h1>
+          <p class="product-hero__subtitle">Focus better by turning distracting sites grayscale.</p>
+          <div class="product-hero__actions">
+            <a href="https://chrome.google.com/webstore/detail/graymode" class="btn btn--primary" target="_blank" rel="noopener">Add to Browser</a>
+            <a href="https://addons.mozilla.org/en-US/firefox/addon/graymode/" class="btn btn--secondary" target="_blank" rel="noopener">Firefox</a>
           </div>
         </div>
-      </div>
-    </section>
 
-    <section class="section container">
-      <h2 class="section__title">The Problem</h2>
-      <div class="section__content">
-        <p>Bright colors trigger dopamine. Social media is designed to addict. You open Twitter "for a second" and lose an hour.</p>
-        <p>The colorful interfaces are engineered to keep you scrolling. Every notification, every like, every colorful thumbnail is a dopamine hit.</p>
-      </div>
-    </section>
+        <div class="preview-row" aria-label="GrayMode preview states">
+          <article class="preview-card">
+            <div class="preview-card__chrome" aria-hidden="true"><span></span><span></span><span></span></div>
+            <div>
+              <h2 class="preview-card__title">News</h2>
+              <p class="preview-card__text">Remove the color trigger from attention traps and make feeds easier to leave.</p>
+            </div>
+          </article>
 
-    <section class="section container">
-      <h2 class="section__title">The Solution</h2>
-      <div class="section__content">
-        <p>GrayMode removes color from sites you choose, making them boring enough to leave. No willpower needed — the sites just become less appealing.</p>
-        <p>It's the difference between a slot machine and a spreadsheet. Same content, different experience.</p>
-      </div>
-    </section>
+          <article class="preview-card">
+            <div class="preview-card__chrome" aria-hidden="true"><span></span><span></span><span></span></div>
+            <div>
+              <h2 class="preview-card__title">Work mode</h2>
+              <p class="preview-card__text">Keep distracting tabs visually flat while staying productive during focus blocks.</p>
+            </div>
+          </article>
 
-    <section class="section container">
-      <h2 class="section__title">Features</h2>
-      <div class="features">
-        <div class="feature">
-          <span class="feature__check">✓</span>
-          <span class="feature__text">Global toggle — enable/disable grayscale with one click</span>
-        </div>
-        <div class="feature">
-          <span class="feature__check">✓</span>
-          <span class="feature__text">4 preset categories — Social Media, Video, News, Messengers</span>
-        </div>
-        <div class="feature">
-          <span class="feature__check">✓</span>
-          <span class="feature__text">Custom blacklist — add up to 5 sites (unlimited in Pro)</span>
-        </div>
-        <div class="feature">
-          <span class="feature__check">✓</span>
-          <span class="feature__text">Adjustable intensity — slider from 50% to 100% grayscale</span>
-        </div>
-        <div class="feature">
-          <span class="feature__check">✓</span>
-          <span class="feature__text">Zero tracking — all settings stored locally, no analytics</span>
+          <article class="preview-card">
+            <div class="preview-card__chrome" aria-hidden="true"><span></span><span></span><span></span></div>
+            <div>
+              <h2 class="preview-card__title">Social</h2>
+              <p class="preview-card__text">Reduce compulsive scrolling by desaturating the parts of the web designed to hijack attention.</p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section container">
-      <h2 class="section__title">Roadmap</h2>
-      <div class="section__content">
-        <p style="color: var(--text-secondary); margin-bottom: 1rem;">This is an MVP. New features unlock as we grow:</p>
+    <section class="two-up">
+      <div class="section">
+        <h2 class="section__title">How it Works</h2>
+        <div class="section__content">
+          <p>GrayMode helps you focus by removing color from distracting websites, reducing dopamine triggers and making them less engaging.</p>
+          <p>Enable it for specific sites, keep it ready for work hours, and make visual temptation boring enough to ignore.</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2 class="section__title">Key Features</h2>
         <div class="features">
           <div class="feature">
-            <span class="feature__check" style="opacity: 0.5;">○</span>
-            <span class="feature__text"><strong>100 users</strong> — Presets (Work, Evening, Weekend modes)</span>
+            <span class="feature__check">✓</span>
+            <span class="feature__text"><strong>Selective Grayscale</strong> — Choose which sites to gray out.</span>
           </div>
           <div class="feature">
-            <span class="feature__check" style="opacity: 0.5;">○</span>
-            <span class="feature__text"><strong>500 users</strong> — Schedule (auto-enable at specific times)</span>
+            <span class="feature__check">✓</span>
+            <span class="feature__text"><strong>Schedule Focus Time</strong> — Automatically activate GrayMode during work hours.</span>
           </div>
           <div class="feature">
-            <span class="feature__check" style="opacity: 0.5;">○</span>
-            <span class="feature__text"><strong>1000 users</strong> — Sync settings across devices</span>
+            <span class="feature__check">✓</span>
+            <span class="feature__text"><strong>No Data Collection</strong> — Your browsing habits stay private.</span>
+          </div>
+          <div class="feature">
+            <span class="feature__check">✓</span>
+            <span class="feature__text"><strong>Open Source</strong> — Transparent code, transparent behavior.</span>
           </div>
         </div>
-        <p style="color: var(--text-secondary); margin-top: 1rem; font-size: 0.875rem;">Install now and help us unlock new features for everyone.</p>
       </div>
     </section>
 
-    <section class="section container">
+    <section class="section">
+      <h2 class="section__title">Technical Specs</h2>
+      <div class="spec-grid">
+        <article class="spec-card">
+          <h3 class="spec-card__title">Selective Grayscale</h3>
+          <p class="spec-card__text">Choose which sites to gray out and keep visual noise under your control.</p>
+        </article>
+        <article class="spec-card">
+          <h3 class="spec-card__title">Schedule Focus Time</h3>
+          <p class="spec-card__text">Automatically activate during work hours so the guardrail is there before distraction hits.</p>
+        </article>
+        <article class="spec-card">
+          <h3 class="spec-card__title">No Data Collection</h3>
+          <p class="spec-card__text">All settings stay local. No analytics, no telemetry, no browsing data leaving your browser.</p>
+        </article>
+        <article class="spec-card">
+          <h3 class="spec-card__title">Open Source Architecture</h3>
+          <p class="spec-card__text">Inspectable codebase, transparent behavior, and zero black-box infrastructure.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="callout-card">
+        <div class="callout-card__copy">
+          <span class="callout-card__badge">Open Source</span>
+          <h2 class="section__title">Trust &amp; Transparency</h2>
+          <p>GrayMode is built to stay local, predictable, and easy to audit. Inspect the code, verify the permissions, and read the privacy policy before you install it.</p>
+        </div>
+        <div class="callout-card__actions">
+          <a href="https://github.com/timequity/graymode" class="btn btn--secondary" target="_blank" rel="noopener">View Source on GitHub</a>
+          <a href="/graymode/privacy.html" class="btn btn--secondary">GrayMode Privacy Policy</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
       <h2 class="section__title">Troubleshooting</h2>
       <div class="section__content">
         <p><strong>Grayscale not applying?</strong></p>
-        <ul style="color: var(--text-secondary); padding-left: 1.5rem; margin-top: 0.5rem;">
-          <li>First, try refreshing the page (Ctrl+R / Cmd+R)</li>
-          <li>Make sure the extension is enabled (check the toggle in popup)</li>
-          <li>Verify the site is in your blacklist or enabled category</li>
-          <li>Some sites with strict CSP may block the filter</li>
+        <ul>
+          <li>Refresh the page after enabling the extension.</li>
+          <li>Make sure GrayMode is enabled in the popup.</li>
+          <li>Verify the site is included in your selected list or category.</li>
+          <li>Some sites with strict CSP can block visual filters.</li>
         </ul>
-        <p style="margin-top: 1rem;"><strong>Found a bug or have feedback?</strong></p>
-        <p><a href="https://forms.gle/VrwHoyvPLa961gTD6" target="_blank" rel="noopener">Submit feedback</a> (no account needed) or create an issue on <a href="https://github.com/timequity/graymode/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-      </div>
-    </section>
-
-    <section class="section container">
-      <h2 class="section__title">Open Source</h2>
-      <div class="section__content">
-        <p>GrayMode is fully open source. Inspect the code, suggest improvements, or fork it for your own use.</p>
-        <a href="https://github.com/timequity/graymode" class="btn btn--secondary" target="_blank" rel="noopener">
-          View on GitHub →
-        </a>
+        <p><strong>Found a bug or want to suggest an improvement?</strong></p>
+        <p><a href="https://forms.gle/VrwHoyvPLa961gTD6" target="_blank" rel="noopener">Submit feedback</a> or create an issue on <a href="https://github.com/timequity/graymode/issues" target="_blank" rel="noopener">GitHub</a>.</p>
       </div>
     </section>
   </main>
 
   <footer class="footer">
     <div class="container footer__inner">
-      <p class="footer__copy">&copy; 2024 0x7669</p>
-      <nav class="footer__links">
+      <p class="footer__copy">&copy; 2024 timequity</p>
+      <nav class="footer__links" aria-label="Footer navigation">
         <a href="/graymode/privacy.html" class="footer__link">Privacy</a>
         <a href="/terms.html" class="footer__link">Terms</a>
         <a href="https://github.com/timequity/graymode" class="footer__link" target="_blank" rel="noopener">GitHub</a>

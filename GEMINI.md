@@ -1,7 +1,7 @@
 # GEMINI.md — exts.dev context
 
 ## Project Overview
-**exts.dev** is a curated marketplace and portfolio for browser extensions developed by **timequity** (0x7669). The project is built as a high-performance, minimalist static website designed to showcase focused, privacy-first tools.
+**exts.dev** is a curated marketplace and portfolio for browser extensions developed by **timequity**. The project is built as a high-performance, minimalist static website designed to showcase focused, privacy-first tools.
 
 - **Status**: Maintenance / Production.
 - **Core Principle**: "Focused tools for focused people".

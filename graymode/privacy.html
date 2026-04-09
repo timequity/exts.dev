@@ -5,89 +5,133 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy — GrayMode | exts.dev</title>
   <meta name="description" content="Privacy policy for GrayMode browser extension. We don't track you.">
+  <meta name="theme-color" content="#070b10">
 
-  <!-- Fonts: Satoshi + Geist -->
   <link rel="preconnect" href="https://api.fontshare.com">
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,500,400&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
   <link href="https://cdn.jsdelivr.net/npm/geist@1.2.0/dist/fonts/geist-sans/style.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/geist@1.2.0/dist/fonts/geist-mono/style.min.css" rel="stylesheet">
 
-  <!-- Styles -->
   <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg?v=3">
 
-  <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔘</text></svg>">
+  <meta property="og:title" content="Privacy Policy — GrayMode">
+  <meta property="og:description" content="Privacy details for GrayMode. Local-only settings, zero tracking, open source.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://exts.dev/graymode/privacy.html">
 </head>
-<body>
+<body class="page page--detail page--legal page--graymode-privacy">
   <header class="header">
     <div class="container header__inner">
       <a href="/" class="header__logo">exts.dev</a>
-      <nav class="header__nav">
+      <nav class="header__nav" aria-label="GrayMode privacy links">
         <a href="/graymode/" class="header__link">GrayMode</a>
         <a href="https://github.com/timequity/graymode" class="header__link" target="_blank" rel="noopener">GitHub</a>
       </nav>
     </div>
   </header>
 
-  <main class="container legal">
-    <h1>GrayMode Privacy Policy</h1>
-    <p><em>Last updated: December 2024</em></p>
+  <main class="container legal-page">
+    <section class="product-hero">
+      <div class="product-hero__panel" style="--hero-start: rgba(208, 255, 42, 0.92); --hero-mid: rgba(143, 178, 59, 0.78); --hero-end: rgba(44, 59, 89, 0.76); --hero-border: rgba(198, 255, 43, 0.18);">
+        <div class="product-hero__header">
+          <img src="../assets/images/extensions/graymode/icon.png" alt="GrayMode icon" class="product-hero__icon" width="96" height="96">
+          <span class="product-hero__eyebrow">Privacy</span>
+          <h1 class="product-hero__title">GrayMode Privacy</h1>
+          <p class="product-hero__subtitle">What the extension can access, what stays local, and what never leaves your browser.</p>
+          <div class="legal-meta" aria-label="policy metadata">
+            <span class="legal-meta__item">Last updated: December 2024</span>
+            <span class="legal-meta__item">Zero tracking</span>
+            <span class="legal-meta__item">Open source</span>
+          </div>
+          <div class="product-hero__actions">
+            <a href="/graymode/" class="btn btn--primary">Back to GrayMode</a>
+            <a href="https://github.com/timequity/graymode" class="btn btn--secondary" target="_blank" rel="noopener">View Source</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <h2>Overview</h2>
-    <p>GrayMode is a browser extension that applies grayscale filters to websites to help you focus. This policy explains what data the extension accesses and how it's used.</p>
+    <section class="section">
+      <div class="callout-card">
+        <div class="callout-card__copy">
+          <span class="callout-card__badge">Short version</span>
+          <h2 class="section__title">We collect nothing</h2>
+          <p>GrayMode does not collect, store, or transmit personal data, browsing history, or usage analytics. The extension works locally and is designed to stay boring from a data-collection perspective.</p>
+        </div>
+        <div class="callout-card__actions">
+          <a href="/privacy.html" class="btn btn--secondary">All Extensions Privacy</a>
+          <a href="https://github.com/timequity/graymode/issues" class="btn btn--secondary" target="_blank" rel="noopener">Ask on GitHub</a>
+        </div>
+      </div>
+    </section>
 
-    <h2>Data Collection</h2>
-    <p><strong>We collect nothing.</strong> GrayMode does not collect, store, or transmit any personal data, browsing history, or usage statistics.</p>
+    <section class="section">
+      <h2 class="section__title">Privacy details</h2>
+      <div class="spec-grid">
+        <article class="spec-card">
+          <h2 class="spec-card__title">Overview</h2>
+          <div class="spec-card__text"><p>GrayMode applies grayscale filters to distracting websites so they feel less stimulating and easier to leave.</p><p>This page explains which permissions it needs and how that access stays constrained to your browser.</p></div>
+        </article>
+        <article class="spec-card">
+          <h2 class="spec-card__title">Permissions Explained</h2>
+          <div class="spec-card__text"><ul class="legal-list"><li><strong><code>storage</code></strong> stores your settings locally, including enabled categories, custom blacklist entries, and intensity.</li><li><strong><code>activeTab</code></strong> helps detect the site you are currently viewing so GrayMode can decide whether to apply grayscale.</li><li><strong><code>host_permissions: &lt;all_urls&gt;</code></strong> lets the extension inject the grayscale CSS filter on the websites you choose.</li></ul></div>
+        </article>
+        <article class="spec-card">
+          <h2 class="spec-card__title">Local Storage Only</h2>
+          <div class="spec-card__text"><p>Your settings live in <code>chrome.storage.sync</code>.</p><ul class="legal-list"><li>Data stays inside your browser profile.</li><li>If Chrome sync is enabled, your browser may sync settings through your own Google account.</li><li>We do not have access to any of that data.</li></ul></div>
+        </article>
+        <article class="spec-card">
+          <h2 class="spec-card__title">Network Activity</h2>
+          <div class="spec-card__text"><p>GrayMode makes <strong>zero network requests</strong>. No API calls, no analytics beacons, no background telemetry.</p><p>The extension keeps working offline because there is no backend infrastructure behind it.</p></div>
+        </article>
+      </div>
+    </section>
 
-    <h2>Permissions Explained</h2>
-    <p>GrayMode requires the following browser permissions:</p>
-    <ul>
-      <li><strong><code>storage</code></strong> — To save your settings (enabled categories, custom blacklist, intensity) locally on your device. This data never leaves your browser.</li>
-      <li><strong><code>activeTab</code></strong> — To detect which website you're currently viewing so we can apply the grayscale filter if it's on your list.</li>
-      <li><strong><code>host_permissions: &lt;all_urls&gt;</code></strong> — To inject the grayscale CSS filter on any website you choose to add to your blacklist.</li>
-    </ul>
+    <section class="section">
+      <h2 class="section__title">What we do not do</h2>
+      <div class="features">
+        <div class="feature">
+          <span class="feature__check">✓</span>
+          <span class="feature__text">We do not track your browsing history.</span>
+        </div>
+        <div class="feature">
+          <span class="feature__check">✓</span>
+          <span class="feature__text">We do not collect analytics or usage events.</span>
+        </div>
+        <div class="feature">
+          <span class="feature__check">✓</span>
+          <span class="feature__text">We do not show ads or inject sponsored content.</span>
+        </div>
+        <div class="feature">
+          <span class="feature__check">✓</span>
+          <span class="feature__text">We do not sell data because there is no user data to sell.</span>
+        </div>
+        <div class="feature">
+          <span class="feature__check">✓</span>
+          <span class="feature__text">We do not require account creation.</span>
+        </div>
+      </div>
+    </section>
 
-    <h2>Local Storage Only</h2>
-    <p>All your settings are stored using <code>chrome.storage.sync</code>, which means:</p>
-    <ul>
-      <li>Data is stored locally in your browser</li>
-      <li>If you're signed into Chrome, settings may sync across your devices via your Google account</li>
-      <li>We have no access to this data — it's between you and your browser</li>
-    </ul>
-
-    <h2>Network Activity</h2>
-    <p>GrayMode makes <strong>zero network requests</strong>. The extension works entirely offline. We don't have servers, analytics, or any backend infrastructure.</p>
-
-    <h2>What We Don't Do</h2>
-    <ul>
-      <li>Track your browsing history</li>
-      <li>Collect analytics or usage data</li>
-      <li>Show ads</li>
-      <li>Sell data (we have none to sell)</li>
-      <li>Use cookies</li>
-      <li>Require account creation</li>
-    </ul>
-
-    <h2>Open Source</h2>
-    <p>GrayMode is fully open source. You can audit the code yourself on <a href="https://github.com/timequity/graymode">GitHub</a> to verify these claims.</p>
-
-    <h2>Changes</h2>
-    <p>If we ever change this policy, we'll update this page. Given our commitment to privacy, significant changes are unlikely.</p>
-
-    <h2>Contact</h2>
-    <p>Questions? Open an issue on <a href="https://github.com/timequity/graymode/issues">GitHub</a>.</p>
-
-    <p style="margin-top: 3rem;"><a href="/graymode/">&larr; Back to GrayMode</a></p>
+    <section class="section">
+      <div class="section__content">
+        <p><strong>Changes</strong></p>
+        <p>If this policy changes, this page will be updated. Given the product direction, significant privacy changes are unlikely.</p>
+        <p><strong>Questions</strong></p>
+        <p>If something is unclear, open an issue on <a href="https://github.com/timequity/graymode/issues" target="_blank" rel="noopener">GitHub</a> or go back to the <a href="/graymode/">GrayMode page</a>.</p>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
     <div class="container footer__inner">
-      <p class="footer__copy">&copy; 2024 0x7669</p>
-      <nav class="footer__links">
+      <p class="footer__copy">&copy; 2024 timequity</p>
+      <nav class="footer__links" aria-label="Footer navigation">
         <a href="/privacy.html" class="footer__link">All Extensions Privacy</a>
         <a href="/terms.html" class="footer__link">Terms</a>
-        <a href="https://github.com/0x7669" class="footer__link" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://github.com/timequity/graymode" class="footer__link" target="_blank" rel="noopener">GitHub</a>
       </nav>
     </div>
   </footer>

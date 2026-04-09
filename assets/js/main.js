@@ -1,5 +1,3 @@
-// exts.dev — Catalog Filters
-
 (function() {
   'use strict';
 
@@ -8,23 +6,22 @@
 
   if (!filterButtons.length || !cards.length) return;
 
-  filterButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const filter = btn.dataset.filter;
-
-      // Update active state
-      filterButtons.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      // Filter cards
-      cards.forEach(card => {
-        const category = card.dataset.category;
-        if (filter === 'all' || category === filter) {
-          card.style.display = '';
-        } else {
-          card.style.display = 'none';
-        }
-      });
+  const applyFilter = selectedFilter => {
+    filterButtons.forEach(button => {
+      const isActive = button.dataset.filter === selectedFilter;
+      button.classList.toggle('active', isActive);
+      button.setAttribute('aria-pressed', String(isActive));
     });
+
+    cards.forEach(card => {
+      const matches = selectedFilter === 'all' || card.dataset.category === selectedFilter;
+      card.hidden = !matches;
+      card.setAttribute('aria-hidden', String(!matches));
+    });
+  };
+
+  filterButtons.forEach(button => {
+    button.setAttribute('aria-pressed', String(button.classList.contains('active')));
+    button.addEventListener('click', () => applyFilter(button.dataset.filter));
   });
 })();
