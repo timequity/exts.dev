@@ -5,145 +5,151 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TabZen — Tab Manager Without Account | exts.dev</title>
   <meta name="description" content="TabZen saves your tabs automatically. No accounts, no cloud, no data loss. Privacy-first tab manager.">
+  <meta name="theme-color" content="#070b10">
 
-  <!-- Fonts: Satoshi + Geist -->
   <link rel="preconnect" href="https://api.fontshare.com">
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,500,400&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
   <link href="https://cdn.jsdelivr.net/npm/geist@1.2.0/dist/fonts/geist-sans/style.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/geist@1.2.0/dist/fonts/geist-mono/style.min.css" rel="stylesheet">
 
-  <!-- Styles -->
   <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg?v=3">
 
-  <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧘</text></svg>">
-
-  <!-- Open Graph -->
   <meta property="og:title" content="TabZen — Tab Manager Without Account">
   <meta property="og:description" content="Auto-save tabs. No accounts. No data loss. Privacy-first.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://exts.dev/tabzen/">
 </head>
-<body>
+<body class="page page--detail page--tabzen">
   <header class="header">
     <div class="container header__inner">
       <a href="/" class="header__logo">exts.dev</a>
-      <nav class="header__nav">
+      <nav class="header__nav" aria-label="TabZen links">
         <a href="https://github.com/timequity/tabzen" class="header__link" target="_blank" rel="noopener">GitHub</a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section class="ext-hero container">
-      <div class="ext-hero__inner">
-        <img src="../assets/images/extensions/tabzen/icon.png" alt="TabZen icon" class="ext-hero__icon" width="80" height="80">
-        <div class="ext-hero__content">
-          <h1 class="ext-hero__title">TabZen</h1>
-          <p class="ext-hero__tagline">Tab manager that never loses your tabs</p>
-          <div class="ext-hero__buttons">
-            <a href="#" class="btn btn--primary" target="_blank" rel="noopener">
-              Chrome
-            </a>
-            <a href="https://addons.mozilla.org/en-US/firefox/addon/tab7en/" class="btn btn--secondary" target="_blank" rel="noopener">
-              Firefox
-            </a>
+  <main class="container product-page">
+    <section class="product-hero">
+      <div class="product-hero__panel" style="--hero-start: rgba(103, 162, 255, 0.92); --hero-mid: rgba(68, 104, 176, 0.82); --hero-end: rgba(18, 28, 46, 0.8); --hero-border: rgba(125, 200, 255, 0.24);">
+        <div class="product-hero__header">
+          <img src="../assets/images/extensions/tabzen/icon.png" alt="TabZen icon" class="product-hero__icon" width="96" height="96">
+          <span class="product-hero__eyebrow">Focus</span>
+          <h1 class="product-hero__title">TabZen</h1>
+          <p class="product-hero__subtitle">Tab manager that never loses your tabs.</p>
+          <div class="product-hero__actions">
+            <a href="https://addons.mozilla.org/en-US/firefox/addon/tab7en/" class="btn btn--primary" target="_blank" rel="noopener">Firefox</a>
+            <a href="https://github.com/timequity/tabzen" class="btn btn--secondary" target="_blank" rel="noopener">View Source</a>
           </div>
-          <div class="ext-hero__meta">
-            <span>Free</span>
-          </div>
+        </div>
+
+        <div class="preview-row" aria-label="TabZen preview states">
+          <article class="preview-card">
+            <div class="preview-card__chrome" aria-hidden="true"><span></span><span></span><span></span></div>
+            <div>
+              <h2 class="preview-card__title">Auto-save</h2>
+              <p class="preview-card__text">Keep recent tab history safe automatically so crashes and misclicks stop being catastrophic.</p>
+            </div>
+          </article>
+
+          <article class="preview-card">
+            <div class="preview-card__chrome" aria-hidden="true"><span></span><span></span><span></span></div>
+            <div>
+              <h2 class="preview-card__title">Named sessions</h2>
+              <p class="preview-card__text">Split work, research, and reading into clean sessions instead of one giant tab graveyard.</p>
+            </div>
+          </article>
+
+          <article class="preview-card">
+            <div class="preview-card__chrome" aria-hidden="true"><span></span><span></span><span></span></div>
+            <div>
+              <h2 class="preview-card__title">Search fast</h2>
+              <p class="preview-card__text">Find the one tab you actually need without scanning dozens of windows manually.</p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section container">
-      <h2 class="section__title">The Problem</h2>
-      <div class="section__content">
-        <p>73 tabs open. Browser crawling. Can't find anything. Sound familiar?</p>
-        <p>Existing tab managers like OneTab and Session Buddy lose your data. They require accounts for basic features. "After I lost all my tabs with OneTab <em>again</em> I am now switching."</p>
+    <section class="two-up">
+      <div class="section">
+        <h2 class="section__title">The Problem</h2>
+        <div class="section__content">
+          <p>73 tabs open. Browser crawling. Can't find anything. Sound familiar?</p>
+          <p>Existing tab managers like OneTab and Session Buddy still leave you exposed to data loss, brittle workflows, and account pressure for basic features.</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2 class="section__title">The Solution</h2>
+        <div class="section__content">
+          <p>TabZen auto-saves your tabs every 5 minutes and keeps everything local. No accounts, no cloud lock-in, no hidden sync service standing between you and your sessions.</p>
+          <p>Restore after browser crashes, accidental closes, or restarts and continue where you left off.</p>
+        </div>
       </div>
     </section>
 
-    <section class="section container">
-      <h2 class="section__title">The Solution</h2>
-      <div class="section__content">
-        <p>TabZen auto-saves your tabs every 5 minutes. Everything stored locally — no accounts, no cloud, no risk of data loss.</p>
-        <p>Your tabs survive browser crashes, accidental closes, and system restarts. Just restore and continue where you left off.</p>
+    <section class="section">
+      <h2 class="section__title">Key Features</h2>
+      <div class="spec-grid">
+        <article class="spec-card">
+          <h3 class="spec-card__title">Auto-save Every 5 Minutes</h3>
+          <p class="spec-card__text">Keeps the latest recovery points ready so you can roll back without drama.</p>
+        </article>
+        <article class="spec-card">
+          <h3 class="spec-card__title">5 Named Sessions</h3>
+          <p class="spec-card__text">Organize tabs by project, context, or client instead of dumping everything into one stack.</p>
+        </article>
+        <article class="spec-card">
+          <h3 class="spec-card__title">Global Search</h3>
+          <p class="spec-card__text">Find any saved tab instantly across open windows and stored sessions.</p>
+        </article>
+        <article class="spec-card">
+          <h3 class="spec-card__title">Local-only Storage</h3>
+          <p class="spec-card__text">Export and import JSON if you want backups, but your default workflow stays private and offline.</p>
+        </article>
       </div>
     </section>
 
-    <section class="section container">
-      <h2 class="section__title">Features</h2>
+    <section class="section">
+      <div class="callout-card">
+        <div class="callout-card__copy">
+          <span class="callout-card__badge">Roadmap</span>
+          <h2 class="section__title">Grow into the next layer</h2>
+          <p>This is the MVP. As adoption grows, the roadmap unlocks unlimited sessions, tab groups, optional encrypted sync, and collaboration features.</p>
+        </div>
+        <div class="callout-card__actions">
+          <a href="https://forms.gle/pSEYWn9CkXQ91N519" class="btn btn--secondary" target="_blank" rel="noopener">Submit feedback</a>
+          <a href="/tabzen/privacy.html" class="btn btn--secondary">TabZen Privacy Policy</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section__title">Milestones</h2>
       <div class="features">
         <div class="feature">
-          <span class="feature__check">✓</span>
-          <span class="feature__text">Auto-save every 5 minutes (keeps last 3) — never lose tabs again</span>
+          <span class="feature__check">○</span>
+          <span class="feature__text"><strong>100 users</strong> — Unlimited sessions and tab groups.</span>
         </div>
         <div class="feature">
-          <span class="feature__check">✓</span>
-          <span class="feature__text">5 named sessions — organize tabs by project or context</span>
+          <span class="feature__check">○</span>
+          <span class="feature__text"><strong>500 users</strong> — Optional encrypted cloud sync.</span>
         </div>
         <div class="feature">
-          <span class="feature__check">✓</span>
-          <span class="feature__text">Tab search — find any tab instantly across all windows</span>
+          <span class="feature__check">○</span>
+          <span class="feature__text"><strong>1000 users</strong> — Session sharing and lightweight team workflows.</span>
         </div>
-        <div class="feature">
-          <span class="feature__check">✓</span>
-          <span class="feature__text">Export/Import JSON — full control over your data</span>
-        </div>
-        <div class="feature">
-          <span class="feature__check">✓</span>
-          <span class="feature__text">Zero tracking — all data stored locally, no analytics</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="section container">
-      <h2 class="section__title">Roadmap</h2>
-      <div class="section__content">
-        <p style="color: var(--text-secondary); margin-bottom: 1rem;">This is an MVP. New features unlock as we grow:</p>
-        <div class="features">
-          <div class="feature">
-            <span class="feature__check" style="opacity: 0.5;">○</span>
-            <span class="feature__text"><strong>100 users</strong> — Unlimited sessions + Tab groups</span>
-          </div>
-          <div class="feature">
-            <span class="feature__check" style="opacity: 0.5;">○</span>
-            <span class="feature__text"><strong>500 users</strong> — Cloud sync (optional, encrypted)</span>
-          </div>
-          <div class="feature">
-            <span class="feature__check" style="opacity: 0.5;">○</span>
-            <span class="feature__text"><strong>1000 users</strong> — Session sharing + Team features</span>
-          </div>
-        </div>
-        <p style="color: var(--text-secondary); margin-top: 1rem; font-size: 0.875rem;">Install now and help us unlock new features for everyone.</p>
-      </div>
-    </section>
-
-    <section class="section container">
-      <h2 class="section__title">Feedback</h2>
-      <div class="section__content">
-        <p><strong>Found a bug or have feedback?</strong></p>
-        <p><a href="https://forms.gle/pSEYWn9CkXQ91N519" target="_blank" rel="noopener">Submit feedback</a> (no account needed) or create an issue on <a href="https://github.com/timequity/tabzen/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-      </div>
-    </section>
-
-    <section class="section container">
-      <h2 class="section__title">Open Source</h2>
-      <div class="section__content">
-        <p>TabZen is fully open source. Inspect the code, suggest improvements, or fork it for your own use.</p>
-        <a href="https://github.com/timequity/tabzen" class="btn btn--secondary" target="_blank" rel="noopener">
-          View on GitHub →
-        </a>
       </div>
     </section>
   </main>
 
   <footer class="footer">
     <div class="container footer__inner">
-      <p class="footer__copy">&copy; 2025 0x7669</p>
-      <nav class="footer__links">
+      <p class="footer__copy">&copy; 2025 timequity</p>
+      <nav class="footer__links" aria-label="Footer navigation">
         <a href="/tabzen/privacy.html" class="footer__link">Privacy</a>
         <a href="/terms.html" class="footer__link">Terms</a>
         <a href="https://github.com/timequity/tabzen" class="footer__link" target="_blank" rel="noopener">GitHub</a>

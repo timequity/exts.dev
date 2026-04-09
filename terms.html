@@ -3,68 +3,131 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Terms of Service — exts.dev</title>
+  <title>Terms of Service - exts.dev</title>
   <meta name="description" content="Terms of service for exts.dev browser extensions.">
+  <meta name="theme-color" content="#070b10">
 
-  <!-- Fonts: Satoshi + Geist -->
   <link rel="preconnect" href="https://api.fontshare.com">
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,500,400&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
   <link href="https://cdn.jsdelivr.net/npm/geist@1.2.0/dist/fonts/geist-sans/style.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/geist@1.2.0/dist/fonts/geist-mono/style.min.css" rel="stylesheet">
 
-  <!-- Styles -->
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg?v=3">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg?v=2"><link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%23BEFF00'/><stop offset='100%' style='stop-color:%2300E0FF'/></linearGradient></defs><path d='M20 20 H80 L75 35 H35 V42 H70 L65 57 H35 V65 H80 L75 80 H20 Z' fill='url(%23g)'/></svg>">
+  <meta property="og:title" content="Terms of Service - exts.dev">
+  <meta property="og:description" content="Terms of service for exts.dev browser extensions.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://exts.dev/terms.html">
 </head>
-<body>
+<body class="page page--detail page--legal page--root-terms">
   <header class="header">
     <div class="container header__inner">
       <a href="/" class="header__logo">exts.dev</a>
-      <nav class="header__nav">
-        <a href="https://github.com/0x7669" class="header__link" target="_blank" rel="noopener">GitHub</a>
+      <nav class="header__nav" aria-label="Root terms links">
+        <a href="/" class="header__link">Home</a>
+        <a href="https://github.com/timequity" class="header__link" target="_blank" rel="noopener">GitHub</a>
       </nav>
     </div>
   </header>
 
-  <main class="container legal">
-    <h1>Terms of Service</h1>
-    <p><em>Last updated: December 2024</em></p>
+  <main class="container legal-page">
+    <section class="product-hero">
+      <div class="product-hero__panel" style="--hero-start: rgba(125, 200, 255, 0.84); --hero-mid: rgba(62, 87, 141, 0.82); --hero-end: rgba(28, 35, 57, 0.84); --hero-border: rgba(125, 200, 255, 0.20);">
+        <div class="product-hero__header">
+          <img src="assets/images/favicon.svg" alt="exts.dev icon" class="product-hero__icon" width="96" height="96">
+          <span class="product-hero__eyebrow">Terms</span>
+          <h1 class="product-hero__title">Terms of Service</h1>
+          <p class="product-hero__subtitle">The short version: use the extensions freely, but they are provided as-is and without guarantees.</p>
+          <div class="legal-meta" aria-label="terms metadata">
+            <span class="legal-meta__item">Last updated: December 2024</span>
+            <span class="legal-meta__item">Open source</span>
+            <span class="legal-meta__item">No warranty</span>
+          </div>
+          <div class="product-hero__actions">
+            <a href="/" class="btn btn--primary">Back to Home</a>
+            <a href="/privacy.html" class="btn btn--secondary">Privacy</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <h2>Agreement</h2>
-    <p>By using any browser extension from exts.dev, you agree to these terms. If you don't agree, please uninstall the extension.</p>
+    <section class="section">
+      <div class="callout-card">
+        <div class="callout-card__copy">
+          <span class="callout-card__badge">Short version</span>
+          <h2 class="section__title">Use at your own risk</h2>
+          <p>The extensions are shared under open-source terms and meant to be useful, but there is no promise that they will work perfectly on every browser, every site, or every future update.</p>
+        </div>
+        <div class="callout-card__actions">
+          <a href="/privacy.html" class="btn btn--secondary">Privacy</a>
+          <a href="https://github.com/timequity" class="btn btn--secondary" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </section>
 
-    <h2>License</h2>
-    <p>All extensions are provided under open source licenses (typically MIT). You're free to use, modify, and distribute them according to each extension's specific license terms.</p>
+    <section class="section">
+      <h2 class="section__title">Terms details</h2>
+      <div class="spec-grid">
+        <article class="spec-card">
+          <h2 class="spec-card__title">Agreement</h2>
+          <div class="spec-card__text">
+            <p>By using any browser extension from exts.dev, you agree to these terms.</p>
+            <p>If you do not agree, stop using the extension and uninstall it.</p>
+          </div>
+        </article>
+        <article class="spec-card">
+          <h2 class="spec-card__title">License</h2>
+          <div class="spec-card__text">
+            <p>Extensions are provided under open-source licenses, typically MIT unless stated otherwise in the repository.</p>
+            <p>You may use, inspect, modify, and distribute them according to the license terms of each specific project.</p>
+          </div>
+        </article>
+        <article class="spec-card">
+          <h2 class="spec-card__title">No warranty</h2>
+          <div class="spec-card__text">
+            <p>The extensions are provided "as is" without warranty of any kind.</p>
+            <p>There is no guarantee that they will work perfectly, keep working forever, or behave correctly on every website.</p>
+          </div>
+        </article>
+        <article class="spec-card">
+          <h2 class="spec-card__title">Liability</h2>
+          <div class="spec-card__text">
+            <p>We are not liable for damages arising from use of the extensions.</p>
+            <p>That includes productivity loss, browser issues, broken site behavior, or other side effects of running them.</p>
+          </div>
+        </article>
+      </div>
+    </section>
 
-    <h2>No Warranty</h2>
-    <p>Extensions are provided "as is" without warranty of any kind. We don't guarantee they'll work perfectly, work at all, or work with every website. Use at your own risk.</p>
+    <section class="section">
+      <h2 class="section__title">Operational terms</h2>
+      <div class="features">
+        <div class="feature"><span class="feature__check">✓</span><span class="feature__text">Extensions may update automatically through browser stores.</span></div>
+        <div class="feature"><span class="feature__check">✓</span><span class="feature__text">Functionality may change, improve, break, or be discontinued at any time.</span></div>
+        <div class="feature"><span class="feature__check">✓</span><span class="feature__text">You can stop using any extension by uninstalling it.</span></div>
+        <div class="feature"><span class="feature__check">✓</span><span class="feature__text">Continued use after terms updates means you accept the revised version.</span></div>
+      </div>
+    </section>
 
-    <h2>Limitation of Liability</h2>
-    <p>We're not liable for any damages arising from the use of our extensions. This includes but isn't limited to: lost productivity from extensions not working, websites breaking, or any other issues.</p>
-
-    <h2>Updates</h2>
-    <p>Extensions may update automatically through your browser's extension store. We may change functionality, fix bugs, or add features at any time.</p>
-
-    <h2>Termination</h2>
-    <p>You can stop using any extension by uninstalling it. We may discontinue any extension at any time.</p>
-
-    <h2>Changes to Terms</h2>
-    <p>We may update these terms. Continued use after changes means you accept the new terms.</p>
-
-    <h2>Contact</h2>
-    <p>Questions? Open an issue on <a href="https://github.com/0x7669">GitHub</a>.</p>
+    <section class="section">
+      <div class="section__content">
+        <p><strong>Questions</strong></p>
+        <p>If you have questions about these terms, open an issue on <a href="https://github.com/timequity" target="_blank" rel="noopener">GitHub</a>.</p>
+        <p><strong>Scope</strong></p>
+        <p>These terms cover the exts.dev site and extension portfolio at a general level. Repository-specific license files still apply where they provide more detailed rights.</p>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
     <div class="container footer__inner">
-      <p class="footer__copy">&copy; 2024 0x7669</p>
-      <nav class="footer__links">
+      <p class="footer__copy">&copy; 2024 timequity</p>
+      <nav class="footer__links" aria-label="Footer navigation">
         <a href="/privacy.html" class="footer__link">Privacy</a>
         <a href="/terms.html" class="footer__link">Terms</a>
-        <a href="https://github.com/0x7669" class="footer__link" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://github.com/timequity" class="footer__link" target="_blank" rel="noopener">GitHub</a>
       </nav>
     </div>
   </footer>

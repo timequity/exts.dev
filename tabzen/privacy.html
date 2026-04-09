@@ -5,89 +5,133 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy — TabZen | exts.dev</title>
   <meta name="description" content="Privacy policy for TabZen browser extension. Your tabs stay on your device.">
+  <meta name="theme-color" content="#070b10">
 
-  <!-- Fonts: Satoshi + Geist -->
   <link rel="preconnect" href="https://api.fontshare.com">
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,500,400&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
   <link href="https://cdn.jsdelivr.net/npm/geist@1.2.0/dist/fonts/geist-sans/style.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/geist@1.2.0/dist/fonts/geist-mono/style.min.css" rel="stylesheet">
 
-  <!-- Styles -->
   <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg?v=3">
 
-  <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧘</text></svg>">
+  <meta property="og:title" content="Privacy Policy — TabZen">
+  <meta property="og:description" content="Privacy details for TabZen. Local sessions, no analytics, no cloud lock-in.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://exts.dev/tabzen/privacy.html">
 </head>
-<body>
+<body class="page page--detail page--legal page--tabzen-privacy">
   <header class="header">
     <div class="container header__inner">
       <a href="/" class="header__logo">exts.dev</a>
-      <nav class="header__nav">
+      <nav class="header__nav" aria-label="TabZen privacy links">
         <a href="/tabzen/" class="header__link">TabZen</a>
         <a href="https://github.com/timequity/tabzen" class="header__link" target="_blank" rel="noopener">GitHub</a>
       </nav>
     </div>
   </header>
 
-  <main class="container legal">
-    <h1>TabZen Privacy Policy</h1>
-    <p><em>Last updated: December 2025</em></p>
+  <main class="container legal-page">
+    <section class="product-hero">
+      <div class="product-hero__panel" style="--hero-start: rgba(103, 162, 255, 0.92); --hero-mid: rgba(68, 104, 176, 0.82); --hero-end: rgba(18, 28, 46, 0.80); --hero-border: rgba(125, 200, 255, 0.24);">
+        <div class="product-hero__header">
+          <img src="../assets/images/extensions/tabzen/icon.png" alt="TabZen icon" class="product-hero__icon" width="96" height="96">
+          <span class="product-hero__eyebrow">Privacy</span>
+          <h1 class="product-hero__title">TabZen Privacy</h1>
+          <p class="product-hero__subtitle">Your sessions, tab metadata, and recovery snapshots stay on your device unless you explicitly export them.</p>
+          <div class="legal-meta" aria-label="policy metadata">
+            <span class="legal-meta__item">Last updated: December 2025</span>
+            <span class="legal-meta__item">Zero tracking</span>
+            <span class="legal-meta__item">Open source</span>
+          </div>
+          <div class="product-hero__actions">
+            <a href="/tabzen/" class="btn btn--primary">Back to TabZen</a>
+            <a href="https://github.com/timequity/tabzen" class="btn btn--secondary" target="_blank" rel="noopener">View Source</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <h2>Overview</h2>
-    <p>TabZen is a browser extension that helps you manage tabs with auto-save, sessions, and search. This policy explains what data the extension accesses and how it's used.</p>
+    <section class="section">
+      <div class="callout-card">
+        <div class="callout-card__copy">
+          <span class="callout-card__badge">Short version</span>
+          <h2 class="section__title">Your tabs stay local</h2>
+          <p>TabZen does not transmit session data to external servers. Saved sessions, recovery points, and settings remain in browser storage unless you deliberately export a JSON backup yourself.</p>
+        </div>
+        <div class="callout-card__actions">
+          <a href="/privacy.html" class="btn btn--secondary">All Extensions Privacy</a>
+          <a href="https://github.com/timequity/tabzen/issues" class="btn btn--secondary" target="_blank" rel="noopener">Ask on GitHub</a>
+        </div>
+      </div>
+    </section>
 
-    <h2>Data Collection</h2>
-    <p><strong>We collect nothing.</strong> TabZen does not collect, store, or transmit any personal data, browsing history, or usage statistics to external servers.</p>
+    <section class="section">
+      <h2 class="section__title">Privacy details</h2>
+      <div class="spec-grid">
+        <article class="spec-card">
+          <h2 class="spec-card__title">Overview</h2>
+          <div class="spec-card__text"><p>TabZen helps you manage tabs with auto-save, named sessions, and search.</p><p>To deliver that, it needs access to your open tabs and local browser storage, but not to any external service.</p></div>
+        </article>
+        <article class="spec-card">
+          <h2 class="spec-card__title">Permissions Explained</h2>
+          <div class="spec-card__text"><ul class="legal-list"><li><strong><code>storage</code></strong> stores sessions, settings, and recovery data locally on your device.</li><li><strong><code>tabs</code></strong> reads your open tabs so the extension can save sessions and power search.</li><li><strong><code>alarms</code></strong> runs the local auto-save schedule every 5 minutes.</li></ul></div>
+        </article>
+        <article class="spec-card">
+          <h2 class="spec-card__title">Local Storage Only</h2>
+          <div class="spec-card__text"><p>All TabZen data is stored in <code>chrome.storage.local</code>.</p><ul class="legal-list"><li>No automatic sync across devices by default.</li><li>No cloud backend or server-side session copies.</li><li>No access for us to inspect your saved tabs.</li></ul></div>
+        </article>
+        <article class="spec-card">
+          <h2 class="spec-card__title">Network Activity</h2>
+          <div class="spec-card__text"><p>TabZen makes <strong>zero network requests</strong>. There is no sync service, analytics endpoint, or remote account layer.</p><p>That is intentional: the safest tab data is the data that never leaves your browser.</p></div>
+        </article>
+      </div>
+    </section>
 
-    <h2>Permissions Explained</h2>
-    <p>TabZen requires the following browser permissions:</p>
-    <ul>
-      <li><strong><code>storage</code></strong> — To save your sessions and settings locally on your device. This data never leaves your browser.</li>
-      <li><strong><code>tabs</code></strong> — To read your open tabs for saving sessions and enabling tab search. Tab data is stored only on your device.</li>
-      <li><strong><code>alarms</code></strong> — To schedule auto-save every 5 minutes. Runs entirely locally.</li>
-    </ul>
+    <section class="section">
+      <h2 class="section__title">What we do not do</h2>
+      <div class="features">
+        <div class="feature">
+          <span class="feature__check">✓</span>
+          <span class="feature__text">We do not collect browsing analytics or usage metrics.</span>
+        </div>
+        <div class="feature">
+          <span class="feature__check">✓</span>
+          <span class="feature__text">We do not send your tabs or sessions to external servers.</span>
+        </div>
+        <div class="feature">
+          <span class="feature__check">✓</span>
+          <span class="feature__text">We do not require an account for core functionality.</span>
+        </div>
+        <div class="feature">
+          <span class="feature__check">✓</span>
+          <span class="feature__text">We do not inject ads or sponsored suggestions.</span>
+        </div>
+        <div class="feature">
+          <span class="feature__check">✓</span>
+          <span class="feature__text">We do not sell data because there is no backend data store.</span>
+        </div>
+      </div>
+    </section>
 
-    <h2>Local Storage Only</h2>
-    <p>All your data is stored using <code>chrome.storage.local</code>, which means:</p>
-    <ul>
-      <li>Data is stored locally in your browser</li>
-      <li>Data does not sync across devices (by design — for privacy)</li>
-      <li>We have no access to this data — it's yours alone</li>
-    </ul>
-
-    <h2>Network Activity</h2>
-    <p>TabZen makes <strong>zero network requests</strong>. The extension works entirely offline. We don't have servers, analytics, or any backend infrastructure.</p>
-
-    <h2>What We Don't Do</h2>
-    <ul>
-      <li>Track your browsing history</li>
-      <li>Collect analytics or usage data</li>
-      <li>Send your tabs to external servers</li>
-      <li>Show ads</li>
-      <li>Sell data (we have none to sell)</li>
-      <li>Require account creation</li>
-    </ul>
-
-    <h2>Open Source</h2>
-    <p>TabZen is fully open source. You can audit the code yourself on <a href="https://github.com/timequity/tabzen">GitHub</a> to verify these claims.</p>
-
-    <h2>Changes</h2>
-    <p>If we ever change this policy, we'll update this page. Given our commitment to privacy, significant changes are unlikely.</p>
-
-    <h2>Contact</h2>
-    <p>Questions? Open an issue on <a href="https://github.com/timequity/tabzen/issues">GitHub</a>.</p>
-
-    <p style="margin-top: 3rem;"><a href="/tabzen/">&larr; Back to TabZen</a></p>
+    <section class="section">
+      <div class="section__content">
+        <p><strong>Changes</strong></p>
+        <p>If this policy changes, this page will be updated. Given the product direction, significant privacy changes are unlikely.</p>
+        <p><strong>Questions</strong></p>
+        <p>If something is unclear, open an issue on <a href="https://github.com/timequity/tabzen/issues" target="_blank" rel="noopener">GitHub</a> or go back to the <a href="/tabzen/">TabZen page</a>.</p>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
     <div class="container footer__inner">
-      <p class="footer__copy">&copy; 2025 0x7669</p>
-      <nav class="footer__links">
+      <p class="footer__copy">&copy; 2025 timequity</p>
+      <nav class="footer__links" aria-label="Footer navigation">
         <a href="/privacy.html" class="footer__link">All Extensions Privacy</a>
         <a href="/terms.html" class="footer__link">Terms</a>
-        <a href="https://github.com/0x7669" class="footer__link" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://github.com/timequity/tabzen" class="footer__link" target="_blank" rel="noopener">GitHub</a>
       </nav>
     </div>
   </footer>

@@ -5,98 +5,133 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy — LightSession | exts.dev</title>
   <meta name="description" content="Privacy policy for LightSession browser extension. 100% local, zero tracking.">
+  <meta name="theme-color" content="#070b10">
 
-  <!-- Fonts: Satoshi + Geist -->
   <link rel="preconnect" href="https://api.fontshare.com">
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,500,400&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
   <link href="https://cdn.jsdelivr.net/npm/geist@1.2.0/dist/fonts/geist-sans/style.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/geist@1.2.0/dist/fonts/geist-mono/style.min.css" rel="stylesheet">
 
-  <!-- Styles -->
   <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg?v=3">
 
-  <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <meta property="og:title" content="Privacy Policy — LightSession">
+  <meta property="og:description" content="Privacy details for LightSession. Client-side DOM trimming, no telemetry, no conversation exfiltration.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://exts.dev/lightsession/privacy.html">
 </head>
-<body>
+<body class="page page--detail page--legal page--lightsession-privacy">
   <header class="header">
     <div class="container header__inner">
       <a href="/" class="header__logo">exts.dev</a>
-      <nav class="header__nav">
+      <nav class="header__nav" aria-label="LightSession privacy links">
         <a href="/lightsession/" class="header__link">LightSession</a>
         <a href="https://github.com/11me/light-session" class="header__link" target="_blank" rel="noopener">GitHub</a>
       </nav>
     </div>
   </header>
 
-  <main class="container legal">
-    <h1>LightSession Privacy Policy</h1>
-    <p><em>Last updated: December 2025</em></p>
+  <main class="container legal-page">
+    <section class="product-hero">
+      <div class="product-hero__panel" style="--hero-start: rgba(110, 255, 194, 0.84); --hero-mid: rgba(46, 104, 108, 0.82); --hero-end: rgba(35, 24, 52, 0.82); --hero-border: rgba(110, 255, 194, 0.20);">
+        <div class="product-hero__header">
+          <img src="../assets/images/extensions/lightsession/icon.png" alt="LightSession icon" class="product-hero__icon" width="96" height="96">
+          <span class="product-hero__eyebrow">Privacy</span>
+          <h1 class="product-hero__title">LightSession Privacy</h1>
+          <p class="product-hero__subtitle">Client-side DOM trimming only. Your conversation content stays in the browser and on OpenAI's side, not on ours.</p>
+          <div class="legal-meta" aria-label="policy metadata">
+            <span class="legal-meta__item">Last updated: December 2025</span>
+            <span class="legal-meta__item">Zero tracking</span>
+            <span class="legal-meta__item">Open source</span>
+          </div>
+          <div class="product-hero__actions">
+            <a href="/lightsession/" class="btn btn--primary">Back to LightSession</a>
+            <a href="https://github.com/11me/light-session" class="btn btn--secondary" target="_blank" rel="noopener">View Source</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <h2>Overview</h2>
-    <p>LightSession is a browser extension that fixes ChatGPT UI lag by trimming old messages from the DOM. This policy explains what data the extension accesses and how it's used.</p>
+    <section class="section">
+      <div class="callout-card">
+        <div class="callout-card__copy">
+          <span class="callout-card__badge">Short version</span>
+          <h2 class="section__title">No conversation exfiltration</h2>
+          <p>LightSession does not send conversation text, prompts, responses, or usage events anywhere. It only trims rendered DOM nodes locally to keep long ChatGPT threads responsive.</p>
+        </div>
+        <div class="callout-card__actions">
+          <a href="/privacy.html" class="btn btn--secondary">All Extensions Privacy</a>
+          <a href="https://github.com/11me/light-session/issues" class="btn btn--secondary" target="_blank" rel="noopener">Ask on GitHub</a>
+        </div>
+      </div>
+    </section>
 
-    <h2>Data Collection</h2>
-    <p><strong>We collect nothing.</strong> LightSession does not collect, store, or transmit any personal data, browsing history, conversation content, or usage statistics to external servers.</p>
+    <section class="section">
+      <h2 class="section__title">Privacy details</h2>
+      <div class="spec-grid">
+        <article class="spec-card">
+          <h2 class="spec-card__title">Overview</h2>
+          <div class="spec-card__text"><p>LightSession exists to reduce ChatGPT UI lag by trimming old DOM nodes after long sessions.</p><p>It only needs the permissions required to run on ChatGPT pages and store your local preferences.</p></div>
+        </article>
+        <article class="spec-card">
+          <h2 class="spec-card__title">Permissions Explained</h2>
+          <div class="spec-card__text"><ul class="legal-list"><li><strong><code>storage</code></strong> saves settings such as enabled state and message-count thresholds locally.</li><li><strong>Host permissions for <code>chat.openai.com</code> and <code>chatgpt.com</code></strong> allow the content script to run only on ChatGPT pages where trimming is needed.</li></ul></div>
+        </article>
+        <article class="spec-card">
+          <h2 class="spec-card__title">Local Storage Only</h2>
+          <div class="spec-card__text"><p>Settings are stored in <code>browser.storage.local</code>.</p><ul class="legal-list"><li>No remote sync service.</li><li>No server-side profile.</li><li>No external visibility into your extension state.</li></ul></div>
+        </article>
+        <article class="spec-card">
+          <h2 class="spec-card__title">Conversation Privacy</h2>
+          <div class="spec-card__text"><p>LightSession only trims what the browser renders. It does <strong>not</strong> rewrite or delete your actual conversation on OpenAI's servers.</p><ul class="legal-list"><li>It does not send prompt text or replies to us.</li><li>It does not persist conversation content externally.</li><li>Refreshing the page restores the full thread from the normal ChatGPT source.</li></ul></div>
+        </article>
+      </div>
+    </section>
 
-    <h2>Permissions Explained</h2>
-    <p>LightSession requires the following browser permissions:</p>
-    <ul>
-      <li><strong><code>storage</code></strong> — To save your extension settings (enabled state, message count) locally on your device. This data never leaves your browser.</li>
-      <li><strong><code>Host permissions (chat.openai.com, chatgpt.com)</code></strong> — To inject the content script that performs DOM trimming. The extension only runs on ChatGPT pages.</li>
-    </ul>
+    <section class="section">
+      <h2 class="section__title">What we do not do</h2>
+      <div class="features">
+        <div class="feature">
+          <span class="feature__check">✓</span>
+          <span class="feature__text">We do not read and upload your ChatGPT conversations.</span>
+        </div>
+        <div class="feature">
+          <span class="feature__check">✓</span>
+          <span class="feature__text">We do not send analytics or telemetry to third-party services.</span>
+        </div>
+        <div class="feature">
+          <span class="feature__check">✓</span>
+          <span class="feature__text">We do not inject ads, trackers, or sponsored UI.</span>
+        </div>
+        <div class="feature">
+          <span class="feature__check">✓</span>
+          <span class="feature__text">We do not require account creation.</span>
+        </div>
+        <div class="feature">
+          <span class="feature__check">✓</span>
+          <span class="feature__text">We do not sell data because nothing is collected server-side.</span>
+        </div>
+      </div>
+    </section>
 
-    <h2>Local Storage Only</h2>
-    <p>All your data is stored using <code>browser.storage.local</code>, which means:</p>
-    <ul>
-      <li>Data is stored locally in your browser</li>
-      <li>Data does not sync across devices (by design — for privacy)</li>
-      <li>We have no access to this data — it's yours alone</li>
-    </ul>
-
-    <h2>Network Activity</h2>
-    <p>LightSession makes <strong>zero network requests</strong>. The extension works entirely offline. We don't have servers, analytics, or any backend infrastructure.</p>
-
-    <h2>Conversation Privacy</h2>
-    <p>LightSession only trims the DOM (what the browser renders). It does not:</p>
-    <ul>
-      <li>Read or store your conversation content</li>
-      <li>Send any data to external servers</li>
-      <li>Modify your actual conversation on OpenAI's servers</li>
-    </ul>
-    <p>Your full conversation remains intact on OpenAI's side and can be restored by refreshing the page.</p>
-
-    <h2>What We Don't Do</h2>
-    <ul>
-      <li>Track your browsing history</li>
-      <li>Collect analytics or usage data</li>
-      <li>Read your ChatGPT conversations</li>
-      <li>Send data to external servers</li>
-      <li>Show ads</li>
-      <li>Sell data (we have none to sell)</li>
-      <li>Require account creation</li>
-    </ul>
-
-    <h2>Open Source</h2>
-    <p>LightSession is fully open source. You can audit the code yourself on <a href="https://github.com/11me/light-session">GitHub</a> to verify these claims.</p>
-
-    <h2>Changes</h2>
-    <p>If we ever change this policy, we'll update this page. Given our commitment to privacy, significant changes are unlikely.</p>
-
-    <h2>Contact</h2>
-    <p>Questions? Open an issue on <a href="https://github.com/11me/light-session/issues">GitHub</a>.</p>
-
-    <p style="margin-top: 3rem;"><a href="/lightsession/">&larr; Back to LightSession</a></p>
+    <section class="section">
+      <div class="section__content">
+        <p><strong>Changes</strong></p>
+        <p>If this policy changes, this page will be updated. Given the product direction, significant privacy changes are unlikely.</p>
+        <p><strong>Questions</strong></p>
+        <p>If something is unclear, open an issue on <a href="https://github.com/11me/light-session/issues" target="_blank" rel="noopener">GitHub</a> or go back to the <a href="/lightsession/">LightSession page</a>.</p>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
     <div class="container footer__inner">
-      <p class="footer__copy">&copy; 2025 0x7669</p>
-      <nav class="footer__links">
+      <p class="footer__copy">&copy; 2025 timequity</p>
+      <nav class="footer__links" aria-label="Footer navigation">
         <a href="/privacy.html" class="footer__link">All Extensions Privacy</a>
         <a href="/terms.html" class="footer__link">Terms</a>
-        <a href="https://github.com/11me" class="footer__link" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://github.com/11me/light-session" class="footer__link" target="_blank" rel="noopener">GitHub</a>
       </nav>
     </div>
   </footer>
